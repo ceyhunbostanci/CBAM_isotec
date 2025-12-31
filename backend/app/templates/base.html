@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ title or "ISOTEC CBAM Platform (MVP)" }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div class="min-h-screen">
+    <header class="bg-white border-b">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">iso</div>
+          <div>
+            <div class="font-semibold">ISOTEC CBAM Platform</div>
+            <div class="text-xs text-slate-500">Q bazlı otomatik raporlama (MVP)</div>
+          </div>
+        </div>
+        {% if user %}
+        <div class="flex items-center gap-3">
+          <div class="text-sm text-slate-600">{{ user.full_name or user.email }}</div>
+          <a class="text-sm px-3 py-2 rounded-lg border hover:bg-slate-50" href="/logout">Çıkış</a>
+        </div>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-6">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 py-8 text-xs text-slate-500">
+      ISOTEC Enerji • CBAM otomasyon platformu • MVP
+    </footer>
+  </div>
+</body>
+</html>
