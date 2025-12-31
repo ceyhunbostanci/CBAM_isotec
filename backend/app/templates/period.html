@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex items-start justify-between gap-4">
+  <div>
+    <h1 class="text-2xl font-semibold">{{ period.year }}-Q{{ period.quarter }}</h1>
+    <p class="text-sm text-slate-600 mt-1">{{ period.start_date }} → {{ period.end_date }}</p>
+  </div>
+  <div class="flex gap-2">
+    <a class="px-3 py-2 rounded-lg border hover:bg-slate-50 text-sm" href="/period/{{ period.id }}/export/excel">Excel (CBAM)</a>
+    <a class="px-3 py-2 rounded-lg border hover:bg-slate-50 text-sm" href="/period/{{ period.id }}/export/pdf">PDF (Kurumsal)</a>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-6 mt-6">
+  <div class="lg:col-span-2 space-y-6">
+    <section class="bg-white rounded-2xl border shadow-sm p-5" id="installation">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="font-semibold">Tesis Bilgileri</div>
+          <div class="text-xs text-slate-500">CBAM template → A_InstData otomatik doldurulur</div>
+        </div>
+      </div>
+
+      <form class="mt-4 grid md:grid-cols-2 gap-3" method="post" action="/period/{{ period.id }}/installation">
+        <div>
+          <label class="text-sm font-medium">Firma</label>
+          <input name="installation_name" value="{{ period.installation_name }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Firma (EN)</label>
+          <input name="installation_name_en" value="{{ period.installation_name_en }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Adres</label>
+          <input name="street_number" value="{{ period.street_number }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Şehir</label>
+          <input name="city" value="{{ period.city }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Ülke</label>
+          <input name="country" value="{{ period.country }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">UNLOCODE</label>
+          <input name="unlocode" value="{{ period.unlocode }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Koordinat (Lat)</label>
+          <input name="latitude" value="{{ period.latitude }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Koordinat (Lon)</label>
+          <input name="longitude" value="{{ period.longitude }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="text-sm font-medium">Ekonomik Aktivite</label>
+          <input name="economic_activity" value="{{ period.economic_activity }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+
+        <div class="md:col-span-2 grid md:grid-cols-3 gap-3">
+          <div>
+            <label class="text-sm font-medium">Posta Kodu</label>
+            <input name="post_code" value="{{ period.post_code }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+          </div>
+          <div>
+            <label class="text-sm font-medium">P.O. Box</label>
+            <input name="po_box" value="{{ period.po_box }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 grid md:grid-cols-3 gap-3">
+          <div class="md:col-span-3">
+            <label class="text-sm font-medium">Veri Kalitesi (C_Emissions&Energy / H40)</label>
+            <textarea name="data_quality" class="mt-1 w-full px-3 py-2 rounded-lg border" rows="2">{{ period.data_quality }}</textarea>
+          </div>
+          <div class="md:col-span-3">
+            <label class="text-sm font-medium">Varsayılan Değer Gerekçesi (H41)</label>
+            <textarea name="default_values_justification" class="mt-1 w-full px-3 py-2 rounded-lg border" rows="2">{{ period.default_values_justification }}</textarea>
+          </div>
+          <div class="md:col-span-3">
+            <label class="text-sm font-medium">Kalite Güvence (H42)</label>
+            <textarea name="quality_assurance" class="mt-1 w-full px-3 py-2 rounded-lg border" rows="2">{{ period.quality_assurance }}</textarea>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <button class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Kaydet</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="bg-white rounded-2xl border shadow-sm p-5" id="products">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="font-semibold">Ürünler (CN Code)</div>
+          <div class="text-xs text-slate-500">CBAM Summary_Products’a aktarılır (MVP)</div>
+        </div>
+      </div>
+
+      <form class="mt-4 grid md:grid-cols-4 gap-3" method="post" action="/period/{{ period.id }}/product/add">
+        <div>
+          <label class="text-sm font-medium">CN Code</label>
+          <input name="cn_code" placeholder="7610 90 90" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm font-medium">Ürün Adı</label>
+          <input name="product_name" placeholder="Alüminyum yapı/aksam" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Kategori</label>
+          <input name="aggregated_category" placeholder="Aluminium products" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm font-medium">CN Name (ops.)</label>
+          <input name="cn_name" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Üretim (t)</label>
+          <input name="production_t" type="number" step="0.001" value="0" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Direct SEE (tCO2e/t)</label>
+          <input name="direct_see" type="number" step="0.000001" value="0" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Indirect SEE (tCO2e/t)</label>
+          <input name="indirect_see" type="number" step="0.000001" value="0" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div class="md:col-span-4">
+          <button class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Ürün Ekle</button>
+        </div>
+      </form>
+
+      <div class="mt-6">
+        <div class="text-sm font-medium mb-2">Mevcut Ürünler</div>
+        <div class="overflow-x-auto border rounded-xl">
+          <table class="min-w-full text-sm">
+            <thead class="bg-slate-50 text-slate-600">
+              <tr>
+                <th class="text-left p-2">CN</th>
+                <th class="text-left p-2">Ürün</th>
+                <th class="text-right p-2">Üretim (t)</th>
+                <th class="text-right p-2">Direct</th>
+                <th class="text-right p-2">Indirect</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y bg-white">
+              {% for p in products %}
+              <tr>
+                <td class="p-2 font-mono">{{ p.cn_code }}</td>
+                <td class="p-2">{{ p.product_name }}</td>
+                <td class="p-2 text-right">{{ "%.3f"|format(p.production_t or 0) }}</td>
+                <td class="p-2 text-right">{{ "%.6f"|format(p.direct_see or 0) }}</td>
+                <td class="p-2 text-right">{{ "%.6f"|format(p.indirect_see or 0) }}</td>
+              </tr>
+              {% endfor %}
+              {% if not products %}
+              <tr><td class="p-3 text-slate-500" colspan="5">Henüz ürün eklenmedi.</td></tr>
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="space-y-6">
+    <section class="bg-white rounded-2xl border shadow-sm p-5" id="energy">
+      <div class="font-semibold">Enerji (MVP)</div>
+      <div class="text-xs text-slate-500 mt-1">PDF fatura yüklerseniz otomatik çekmeye çalışır.</div>
+
+      <form class="mt-4 grid grid-cols-2 gap-3" method="post" action="/period/{{ period.id }}/energy">
+        <div>
+          <label class="text-sm font-medium">Elektrik (kWh)</label>
+          <input name="electricity_kwh" type="number" step="0.01" value="{{ energy.electricity_kwh if energy else 0 }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Doğalgaz (Sm³)</label>
+          <input name="natural_gas_sm3" type="number" step="0.01" value="{{ energy.natural_gas_sm3 if energy else 0 }}" class="mt-1 w-full px-3 py-2 rounded-lg border"/>
+        </div>
+        <div class="col-span-2">
+          <button class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Kaydet</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="bg-white rounded-2xl border shadow-sm p-5" id="uploads">
+      <div class="font-semibold">Doküman Yükle</div>
+      <div class="text-xs text-slate-500 mt-1">PDF/Excel/JPG/PNG desteklenir. (MVP: PDF metin çekimi)</div>
+
+      <form class="mt-4 space-y-3" method="post" enctype="multipart/form-data" action="/period/{{ period.id }}/upload">
+        <div>
+          <label class="text-sm font-medium">Tür</label>
+          <select name="kind" class="mt-1 w-full px-3 py-2 rounded-lg border">
+            <option value="electricity">Elektrik Faturası</option>
+            <option value="gas">Doğalgaz Faturası</option>
+            <option value="evidence" selected>Destek Dokümanı</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm font-medium">Dosya</label>
+          <input name="file" type="file" class="mt-1 w-full"/>
+        </div>
+        <button class="w-full px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Yükle</button>
+      </form>
+
+      <div class="mt-4">
+        <div class="text-sm font-medium mb-2">Yüklenenler</div>
+        <div class="space-y-2">
+          {% for u in uploads %}
+          <div class="p-3 rounded-xl border bg-white">
+            <div class="text-sm font-medium">{{ u.original_name }}</div>
+            <div class="text-xs text-slate-500">{{ u.kind }} • {{ u.uploaded_at }}</div>
+          </div>
+          {% endfor %}
+          {% if not uploads %}
+            <div class="text-sm text-slate-500">Henüz doküman yok.</div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-2xl border shadow-sm p-5">
+      <div class="font-semibold">Hızlı CN Önerileri (ISOTEC)</div>
+      <div class="text-xs text-slate-500 mt-1">CN Kodları PDF’inden derlenen başlangıç seti</div>
+      <div class="mt-3 text-sm space-y-2">
+        <div class="p-3 rounded-xl bg-slate-50 border">
+          <div class="font-mono">7610 90 90</div>
+          <div class="text-slate-600">Alüminyum yapılar ve yapı aksamı</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border">
+          <div class="font-mono">7308 90 98</div>
+          <div class="text-slate-600">Demir/çelik yapılar ve aksamı</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border">
+          <div class="font-mono">7318 ..</div>
+          <div class="text-slate-600">Vida/cıvata/pul (bağlantı elemanları)</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}
