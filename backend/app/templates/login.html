@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="grid md:grid-cols-2 gap-6 items-center">
+  <div class="bg-white rounded-2xl border p-6 shadow-sm">
+    <h1 class="text-2xl font-semibold">Giriş</h1>
+    <p class="text-sm text-slate-600 mt-1">CBAM raporlarınızı çeyrek bazlı yönetin ve çıktıları alın.</p>
+
+    {% if error %}
+      <div class="mt-4 p-3 rounded-lg bg-red-50 text-red-700 text-sm border border-red-100">{{ error }}</div>
+    {% endif %}
+
+    <form class="mt-6 space-y-4" method="post" action="/login">
+      <div>
+        <label class="text-sm font-medium">E-posta</label>
+        <input name="email" type="email" required class="mt-1 w-full px-3 py-2 rounded-lg border bg-white"/>
+      </div>
+      <div>
+        <label class="text-sm font-medium">Şifre</label>
+        <input name="password" type="password" required class="mt-1 w-full px-3 py-2 rounded-lg border bg-white"/>
+      </div>
+      <button class="w-full px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Giriş Yap</button>
+      <div class="text-xs text-slate-500">
+        Varsayılan admin: <span class="font-mono">admin@isotec.local</span> / <span class="font-mono">ChangeMe123!</span>
+      </div>
+    </form>
+  </div>
+
+  <div class="bg-gradient-to-br from-slate-900 to-slate-700 text-white rounded-2xl p-8">
+    <div class="text-sm uppercase tracking-wide text-white/70">Amaç</div>
+    <div class="text-3xl font-semibold mt-2">Tam otomatik CBAM raporlama</div>
+    <ul class="mt-6 space-y-2 text-white/90 text-sm list-disc pl-5">
+      <li>Fatura/doküman yükle → otomatik veri çıkarımı</li>
+      <li>Ürün/CN kodu yönetimi</li>
+      <li>CBAM global şablonu (Excel) + Kurumsal PDF</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
