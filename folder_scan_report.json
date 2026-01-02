@@ -1,0 +1,265 @@
+{
+  "run_id": "20260101_230726",
+  "target": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec",
+  "generated_at": "2026-01-01T23:07:26",
+  "total_files": 32,
+  "total_size_bytes": 6383845,
+  "items": [
+    {
+      "path": ".gitattributes",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\.gitattributes",
+      "size": 68,
+      "mtime": 1767283999,
+      "ext": "",
+      "sha1_2mb": "78d61b8d5577d8909a33e526f0b968a5a6a81c1c"
+    },
+    {
+      "path": "README.md",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\README.md",
+      "size": 3113,
+      "mtime": 1767283999,
+      "ext": ".md",
+      "sha1_2mb": "a920d308ea22be70e74453bbcb87dbcd95a71b1a"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\Dockerfile",
+      "size": 468,
+      "mtime": 1767283999,
+      "ext": "",
+      "sha1_2mb": "4824537afa01e563fd7aae31c9c2a5b5b651c49b"
+    },
+    {
+      "path": "backend/app/auth.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\auth.py",
+      "size": 1094,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "652782d8d5e6d9fe027b0e6766e154ca9ca3b075"
+    },
+    {
+      "path": "backend/app/cbam_excel.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\cbam_excel.py",
+      "size": 2414,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "9bcc3d9814dcae6bdf1050dc88d69494a3434380"
+    },
+    {
+      "path": "backend/app/db.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\db.py",
+      "size": 427,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "c84372829872378e4a5065d4ab72a533b72eb02a"
+    },
+    {
+      "path": "backend/app/invoice_parse.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\invoice_parse.py",
+      "size": 1190,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "6844fdac814f13f8b827d5f44a1bae28b435c1bd"
+    },
+    {
+      "path": "backend/app/main.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\main.py",
+      "size": 11054,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "f2fac16ade9b37308d0752f4b7494bddba7407d3"
+    },
+    {
+      "path": "backend/app/models.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\models.py",
+      "size": 3904,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "fdc2f3a60b6e4eb0c5deb861a5b4ae93273b7738"
+    },
+    {
+      "path": "backend/app/pdf_report.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\pdf_report.py",
+      "size": 3363,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "2ac531955de02439258a9978eea9b65b5dce27de"
+    },
+    {
+      "path": "backend/app/static/style.css",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\static\\style.css",
+      "size": 30,
+      "mtime": 1767283999,
+      "ext": ".css",
+      "sha1_2mb": "69ff13d5f3e70a86ac4bd2f03b29a0119ae591e5"
+    },
+    {
+      "path": "backend/app/templates/base.html",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\templates\\base.html",
+      "size": 1450,
+      "mtime": 1767283999,
+      "ext": ".html",
+      "sha1_2mb": "82452a1533c5b61051763eb3a72bfaf074c0c219"
+    },
+    {
+      "path": "backend/app/templates/dashboard.html",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\templates\\dashboard.html",
+      "size": 2858,
+      "mtime": 1767283999,
+      "ext": ".html",
+      "sha1_2mb": "e6c661d59610551b258e880b8e41cc886150756b"
+    },
+    {
+      "path": "backend/app/templates/login.html",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\templates\\login.html",
+      "size": 1800,
+      "mtime": 1767283999,
+      "ext": ".html",
+      "sha1_2mb": "29685b251dfe963a0e22c3bb77d7bf3762f883e1"
+    },
+    {
+      "path": "backend/app/templates/period.html",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\app\\templates\\period.html",
+      "size": 12137,
+      "mtime": 1767283999,
+      "ext": ".html",
+      "sha1_2mb": "73ac71865fcbf5a56919fdcbc6ecb079507e1f5c"
+    },
+    {
+      "path": "backend/cbam_excel.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\cbam_excel.py",
+      "size": 3044,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "3cb8e5892a509f9f4b6586fd1afd6a5b676492d2"
+    },
+    {
+      "path": "backend/cbam_pdf.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\cbam_pdf.py",
+      "size": 2115,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "94cb95c4152b89ab290af703d609c60b35f9a129"
+    },
+    {
+      "path": "backend/data/app.db",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\app.db",
+      "size": 32768,
+      "mtime": 1767283999,
+      "ext": ".db",
+      "sha1_2mb": "8fea4a14d9509b45572509c1c549d20d82e3d7ed"
+    },
+    {
+      "path": "backend/data/exports/ISOTEC_CBAM_2025_Q3.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\exports\\ISOTEC_CBAM_2025_Q3.pdf",
+      "size": 2868,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "57a0163df12acaedd46bbac30a01af4f6df5090f"
+    },
+    {
+      "path": "backend/data/exports/ISOTEC_CBAM_2025_Q3.xlsx",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\exports\\ISOTEC_CBAM_2025_Q3.xlsx",
+      "size": 847723,
+      "mtime": 1767283999,
+      "ext": ".xlsx",
+      "sha1_2mb": "b74cd5197c34c801cd80e21e96af49f99c9bc0a2"
+    },
+    {
+      "path": "backend/data/templates/cbam_template.xlsx",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\templates\\cbam_template.xlsx",
+      "size": 1264200,
+      "mtime": 1767283999,
+      "ext": ".xlsx",
+      "sha1_2mb": "fc0263374da507e4136e83a49c2220b550b82808"
+    },
+    {
+      "path": "backend/data/uploads/1_electricity_20251230090218_07-2025 Elektrik.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_electricity_20251230090218_07-2025 Elektrik.pdf",
+      "size": 157199,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "40204c5619c9d60e8e33211e399b30aeba4775cc"
+    },
+    {
+      "path": "backend/data/uploads/1_electricity_20251230090229_08-2025 Elektrik.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_electricity_20251230090229_08-2025 Elektrik.pdf",
+      "size": 156733,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "f60e23ca35b5fd2487385860bcfa6d375fe50551"
+    },
+    {
+      "path": "backend/data/uploads/1_electricity_20251230090250_09-2025 Elektrik.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_electricity_20251230090250_09-2025 Elektrik.pdf",
+      "size": 156994,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "4febb93d7a15e301a19e6d59f72da9c1c9f39b48"
+    },
+    {
+      "path": "backend/data/uploads/1_evidence_20251230090329_08-2025 Doğalgaz.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_evidence_20251230090329_08-2025 Doğalgaz.pdf",
+      "size": 141734,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "7029462c85cf3879f5031417f46d6ac09ead87c7"
+    },
+    {
+      "path": "backend/data/uploads/1_gas_20251230090323_07-2025 Doğalgaz.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_gas_20251230090323_07-2025 Doğalgaz.pdf",
+      "size": 146791,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "b676e6e048bc64108f98466f5d0368dcc9f7224a"
+    },
+    {
+      "path": "backend/data/uploads/1_gas_20251230090340_09-2025 Doğalgaz.pdf",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\data\\uploads\\1_gas_20251230090340_09-2025 Doğalgaz.pdf",
+      "size": 141943,
+      "mtime": 1767283999,
+      "ext": ".pdf",
+      "sha1_2mb": "57c0c4300d3334f9cf136a86b72e68b950d5d86b"
+    },
+    {
+      "path": "backend/main.py",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\main.py",
+      "size": 4361,
+      "mtime": 1767283999,
+      "ext": ".py",
+      "sha1_2mb": "b8ec2670d29c4ac0cceff5897786e37579b60d7e"
+    },
+    {
+      "path": "backend/pydantic_core-2.41.5-cp314-cp314-win_amd64.whl",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\pydantic_core-2.41.5-cp314-cp314-win_amd64.whl",
+      "size": 2015489,
+      "mtime": 1767283999,
+      "ext": ".whl",
+      "sha1_2mb": "cd9014b47c80e8da3cab9455ebdc2b1bb45464f9"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\requirements.txt",
+      "size": 81,
+      "mtime": 1767283999,
+      "ext": ".txt",
+      "sha1_2mb": "3dd660f7179f75507991dd59059cf1a9a368c6b8"
+    },
+    {
+      "path": "backend/templates/cbam_template.xlsx",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\backend\\templates\\cbam_template.xlsx",
+      "size": 1264200,
+      "mtime": 1767283999,
+      "ext": ".xlsx",
+      "sha1_2mb": "fc0263374da507e4136e83a49c2220b550b82808"
+    },
+    {
+      "path": "docker-compose.yml",
+      "abs_path": "C:\\Users\\ceyhu\\Desktop\\CBAM_isotec\\docker-compose.yml",
+      "size": 232,
+      "mtime": 1767283999,
+      "ext": ".yml",
+      "sha1_2mb": "8b78f3424af1e65e3268ef85995e280defec1a74"
+    }
+  ]
+}

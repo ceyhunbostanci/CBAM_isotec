@@ -1,0 +1,33 @@
+path,size,mtime,ext,sha1_2mb
+.gitattributes,68,1767283999,,78d61b8d5577d8909a33e526f0b968a5a6a81c1c
+README.md,3113,1767283999,.md,a920d308ea22be70e74453bbcb87dbcd95a71b1a
+backend/Dockerfile,468,1767283999,,4824537afa01e563fd7aae31c9c2a5b5b651c49b
+backend/app/auth.py,1094,1767283999,.py,652782d8d5e6d9fe027b0e6766e154ca9ca3b075
+backend/app/cbam_excel.py,2414,1767283999,.py,9bcc3d9814dcae6bdf1050dc88d69494a3434380
+backend/app/db.py,427,1767283999,.py,c84372829872378e4a5065d4ab72a533b72eb02a
+backend/app/invoice_parse.py,1190,1767283999,.py,6844fdac814f13f8b827d5f44a1bae28b435c1bd
+backend/app/main.py,11054,1767283999,.py,f2fac16ade9b37308d0752f4b7494bddba7407d3
+backend/app/models.py,3904,1767283999,.py,fdc2f3a60b6e4eb0c5deb861a5b4ae93273b7738
+backend/app/pdf_report.py,3363,1767283999,.py,2ac531955de02439258a9978eea9b65b5dce27de
+backend/app/static/style.css,30,1767283999,.css,69ff13d5f3e70a86ac4bd2f03b29a0119ae591e5
+backend/app/templates/base.html,1450,1767283999,.html,82452a1533c5b61051763eb3a72bfaf074c0c219
+backend/app/templates/dashboard.html,2858,1767283999,.html,e6c661d59610551b258e880b8e41cc886150756b
+backend/app/templates/login.html,1800,1767283999,.html,29685b251dfe963a0e22c3bb77d7bf3762f883e1
+backend/app/templates/period.html,12137,1767283999,.html,73ac71865fcbf5a56919fdcbc6ecb079507e1f5c
+backend/cbam_excel.py,3044,1767283999,.py,3cb8e5892a509f9f4b6586fd1afd6a5b676492d2
+backend/cbam_pdf.py,2115,1767283999,.py,94cb95c4152b89ab290af703d609c60b35f9a129
+backend/data/app.db,32768,1767283999,.db,8fea4a14d9509b45572509c1c549d20d82e3d7ed
+backend/data/exports/ISOTEC_CBAM_2025_Q3.pdf,2868,1767283999,.pdf,57a0163df12acaedd46bbac30a01af4f6df5090f
+backend/data/exports/ISOTEC_CBAM_2025_Q3.xlsx,847723,1767283999,.xlsx,b74cd5197c34c801cd80e21e96af49f99c9bc0a2
+backend/data/templates/cbam_template.xlsx,1264200,1767283999,.xlsx,fc0263374da507e4136e83a49c2220b550b82808
+backend/data/uploads/1_electricity_20251230090218_07-2025 Elektrik.pdf,157199,1767283999,.pdf,40204c5619c9d60e8e33211e399b30aeba4775cc
+backend/data/uploads/1_electricity_20251230090229_08-2025 Elektrik.pdf,156733,1767283999,.pdf,f60e23ca35b5fd2487385860bcfa6d375fe50551
+backend/data/uploads/1_electricity_20251230090250_09-2025 Elektrik.pdf,156994,1767283999,.pdf,4febb93d7a15e301a19e6d59f72da9c1c9f39b48
+backend/data/uploads/1_evidence_20251230090329_08-2025 Doğalgaz.pdf,141734,1767283999,.pdf,7029462c85cf3879f5031417f46d6ac09ead87c7
+backend/data/uploads/1_gas_20251230090323_07-2025 Doğalgaz.pdf,146791,1767283999,.pdf,b676e6e048bc64108f98466f5d0368dcc9f7224a
+backend/data/uploads/1_gas_20251230090340_09-2025 Doğalgaz.pdf,141943,1767283999,.pdf,57c0c4300d3334f9cf136a86b72e68b950d5d86b
+backend/main.py,4361,1767283999,.py,b8ec2670d29c4ac0cceff5897786e37579b60d7e
+backend/pydantic_core-2.41.5-cp314-cp314-win_amd64.whl,2015489,1767283999,.whl,cd9014b47c80e8da3cab9455ebdc2b1bb45464f9
+backend/requirements.txt,81,1767283999,.txt,3dd660f7179f75507991dd59059cf1a9a368c6b8
+backend/templates/cbam_template.xlsx,1264200,1767283999,.xlsx,fc0263374da507e4136e83a49c2220b550b82808
+docker-compose.yml,232,1767283999,.yml,8b78f3424af1e65e3268ef85995e280defec1a74
